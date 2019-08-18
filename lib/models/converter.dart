@@ -25,9 +25,9 @@ class Conversion {
     return E_0 + m_0 * (v_s * deltaLng * cos(latRadian) + v_s * pow(deltaLng,3) / 6 * pow(cos(latRadian),3) * (psi_s - tan(latRadian)));
   }
 
-  Coordinate gridToLatLng(x,y) {
-    assert(x != null && y != null);
-    var constants = Constants.getAllConstants(x, y, system.grid);     // [phiP, vP, rollP, psiP, tanP, deltaE, deltaN]
+  Coordinate gridToLatLng(Coordinate coordinate) {
+    assert(coordinate.x != null && coordinate.y != null);
+    var constants = Constants.getAllConstants(coordinate.x, coordinate.y, system.grid);     // [phiP, vP, rollP, psiP, tanP, deltaE, deltaN]
     double lat = yToLat(constants);
     double lng = xToLng(constants);
     return Coordinate(
@@ -36,11 +36,11 @@ class Conversion {
     );
   }
 
-  Coordinate latLngToGrid(lat, lng) {
-    assert(lat != null && lng != null);
+  Coordinate latLngToGrid(Coordinate coordinate) {
+    assert(coordinate.lat != null && coordinate.lng != null);
     Constants.initAllConstants(system.wgs);
-    lat = lat + 5.5/3600;
-    lng = lng - 8.8/3600;
+    double lat = coordinate.lat + 5.5/3600;
+    double lng = coordinate.lng - 8.8/3600;
     double x = lngToX(lat,lng);
     double y = latToY(lat,lng);
     return Coordinate(
