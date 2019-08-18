@@ -6,14 +6,14 @@ This package allows you to convert WGS 84 Latitude and Longitude to Hong Kong Gr
 Add this repository to `pubspec.yaml`.
 
 Example: 
-```
+```dart
 dependencies:
     flutter:
         sdk: flutter
     flutter_hkgrid80_wgs84_converter:
         git: 
             url: git://github.com/lowkahonn/flutter_hkgrid80_wgs84_converter
-            ref: e5e4e36
+            ref: master
 ```
 
 Import `package:flutter_hkgrid80_wgs84_converter/flutter_hkgrid80_wgs84_converter.dart`, and use `Converter.convert` to convert between the two systems.
@@ -21,7 +21,7 @@ Import `package:flutter_hkgrid80_wgs84_converter/flutter_hkgrid80_wgs84_converte
 Note: This converter is up to 1e-5% error.
 
 Example:
-```
+```dart
 import 'package:flutter_hkgrid80_wgs84_converter/flutter_hkgrid80_wgs84_converter.dart';
 
 // from hkgrid
