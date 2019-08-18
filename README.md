@@ -24,7 +24,6 @@ Example:
 ```dart
 import 'package:flutter_hkgrid80_wgs84_converter/flutter_hkgrid80_wgs84_converter.dart';
 
-// from hkgrid
 final coordinate = new Coordinate(
     x: 834349.252, 
     y: 815894.556,
@@ -32,11 +31,12 @@ final coordinate = new Coordinate(
     lng: 114.158256
 );
 
+// from x y to lat long
 Coordinate latLng = Converter.convert.gridToLatLng(coordinate);
 print(latLng.lat.toString()); // 22.281930012478536 
 print(latLng.lng.toString()); // 114.15824821181121
 
-// from lat long
+// from lat long to x y
 Coordinate xy = Converter.convert.latLngToGrid(coordinate);
 print(xy.x.toString()); // 834350.1488648592
 print(xy.y.toString()); // 815894.2762260285
