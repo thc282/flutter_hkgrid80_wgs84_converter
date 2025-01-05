@@ -12,7 +12,7 @@ dependencies:
         sdk: flutter
     flutter_hkgrid80_wgs84_converter:
         git: 
-            url: git://github.com/lowkahonn/flutter_hkgrid80_wgs84_converter
+            url: https://github.com/lowkahonn/flutter_hkgrid80_wgs84_converter.git
             ref: master
 ```
 
