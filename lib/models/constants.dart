@@ -53,7 +53,7 @@ class Constants {
   static getPhiP(N) {
     double deltaN = N - N_0;
     double c = (deltaN + M_0) / m_0;
-    double error = pow(10,-17);
+    double error = pow(10,-17).toDouble();
     double err = 1; // initialize
     double x0 = 0.3;
     // double x1 = 0.4;

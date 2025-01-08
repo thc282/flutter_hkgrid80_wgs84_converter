@@ -1,8 +1,8 @@
 class Coordinate {
-  final double x;
-  final double y;
-  final double lat;
-  final double lng;
+  double x;
+  double y;
+  double lat;
+  double lng;
 
-  Coordinate({this.x, this.y, this.lat, this.lng});
+  Coordinate({this.x = 0, this.y = 0, this.lat = 0, this.lng = 0});
 }
