@@ -7,17 +7,17 @@ const double m_0 = 1; // scale factor
 const double lat_0 = (22 + 18/60 + 43.68/3600) * pi / 180; // DMS to radian, lat of projection origin
 const double lng_0 = (114 + 10/60 + 42.80/3600) * pi / 180; // DMS to decimal, lng of projection origin
 
-double M_0; // meridian distance measured from equator to origin
-double a;
-double f;
-double e_squared; // first eccentricity of reference ellipsoid
-double e_quad;
-double A_0;
-double A_2;
-double A_4;
-double v_s; // radius of curvature in the prime vertical
-double p_s; // radius of curvature in the meridian
-double psi_s; // isometric latitude
+double M_0 = 0; // meridian distance measured from equator to origin
+double a = 0;
+double f = 0;
+double e_squared = 0; // first eccentricity of reference ellipsoid
+double e_quad = 0;
+double A_0 = 0;
+double A_2 = 0;
+double A_4 = 0;
+double v_s = 0; // radius of curvature in the prime vertical
+double p_s = 0; // radius of curvature in the meridian
+double psi_s = 0; // isometric latitude
 
 enum system {grid, wgs}
 
